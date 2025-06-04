@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace tbTest
+namespace PFerramenta0030482423011
 {
 
 
@@ -20,7 +20,7 @@ namespace tbTest
             DataTable dtCategoria = new DataTable();
             try
             {
-                daCategoria = new SqlDataAdapter("SELECT * FROM CATEGORIA", Form1.conexao);
+                daCategoria = new SqlDataAdapter("SELECT * FROM CATEGORIA", frmPrincipal.conexao);
                 daCategoria.Fill(dtCategoria);
                 daCategoria.FillSchema(dtCategoria, SchemaType.Source);
             } catch (Exception ex)
@@ -35,7 +35,7 @@ namespace tbTest
             try
             {
                 SqlCommand mycommand;
-                mycommand = new SqlCommand("INSERT INTO CATEGORIA VALUES (@descricao)", Form1.conexao);
+                mycommand = new SqlCommand("INSERT INTO CATEGORIA VALUES (@descricao)", frmPrincipal.conexao);
                 mycommand.Parameters.Add(new SqlParameter("@descricao", SqlDbType.VarChar));
                 mycommand.Parameters["@descricao"].Value = Descricao;
                 retorno = mycommand.ExecuteNonQuery();
@@ -53,7 +53,7 @@ namespace tbTest
             try
             {
                 SqlCommand mycommand;
-                mycommand = new SqlCommand("UPDATE CATEGORIA SET descrição = @descricao WHERE id = @idcategoria", Form1.conexao);
+                mycommand = new SqlCommand("UPDATE CATEGORIA SET descrição = @descricao WHERE id = @idcategoria", frmPrincipal.conexao);
                 mycommand.Parameters.Add(new SqlParameter("@idcategoria", SqlDbType.Int));
                 mycommand.Parameters.Add(new SqlParameter("@descricao", SqlDbType.VarChar));
 
@@ -75,7 +75,7 @@ namespace tbTest
             try
             {
                 SqlCommand mycommand;
-                mycommand = new SqlCommand("DELETE FROM CATEGORIA WHERE id=@idcategoria", Form1.conexao);
+                mycommand = new SqlCommand("DELETE FROM CATEGORIA WHERE id=@idcategoria", frmPrincipal.conexao);
                 mycommand.Parameters.Add(new SqlParameter("@idcategoria", SqlDbType.Int));
                 mycommand.Parameters["@idcategoria"].Value = IdCategoria;
 

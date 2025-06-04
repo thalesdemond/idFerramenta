@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace tbTest.Properties
+namespace PFerramenta0030482423011.Properties
 {
 
 

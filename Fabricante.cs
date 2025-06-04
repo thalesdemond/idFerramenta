@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace tbTest
+namespace PFerramenta0030482423011
 {
     class Fabricante
     {
@@ -21,7 +21,7 @@ namespace tbTest
             DataTable dtFabricante = new DataTable();
             try
             {
-                daFabricante = new SqlDataAdapter("SELECT * FROM FABRICANTE",Form1.conexao);
+                daFabricante = new SqlDataAdapter("SELECT * FROM FABRICANTE",frmPrincipal.conexao);
                 daFabricante.Fill(dtFabricante);
                 daFabricante.FillSchema(dtFabricante, SchemaType.Source);
                 return dtFabricante;
@@ -38,7 +38,7 @@ namespace tbTest
             try
             {
                 SqlCommand mycommand;
-                mycommand = new SqlCommand("INSERT INTO FABRICANTE VALUES (@nomeFantasia)", Form1.conexao);
+                mycommand = new SqlCommand("INSERT INTO FABRICANTE VALUES (@nomeFantasia)", frmPrincipal.conexao);
 
                 mycommand.Parameters.Add(new SqlParameter("@nomeFantasia", SqlDbType.VarChar));
 
@@ -60,7 +60,7 @@ namespace tbTest
                 SqlCommand mycommand;
 
                 mycommand = new SqlCommand("UPDATE FABRICANTE SET nomeFantasia=" +
-                    " @nomeFanatasia WHERE id=@idfabricante", Form1.conexao);
+                    " @nomeFanatasia WHERE id=@idfabricante", frmPrincipal.conexao);
 
                 mycommand.Parameters.Add(new SqlParameter("@idfabricante", SqlDbType.Int));
 
@@ -83,7 +83,7 @@ namespace tbTest
             try
             {
                 SqlCommand mycommand;
-                mycommand = new SqlCommand("DELETE FROM FABRICANTE WHERE id=@idfabricante", Form1.conexao);
+                mycommand = new SqlCommand("DELETE FROM FABRICANTE WHERE id=@idfabricante", frmPrincipal.conexao);
                 mycommand.Parameters.Add(new SqlParameter("@idfabricante", SqlDbType.Int));
                 mycommand.Parameters["@idfabricante"].Value = IdFabricante;
 

@@ -10,12 +10,12 @@ using System.Windows.Forms;
 using System.Data.Sql;
 using System.Data.SqlClient;
 
-namespace tbTest
+namespace PFerramenta0030482423011
 {
-    public partial class Form1: Form
+    public partial class frmPrincipal: Form
     {
         public static SqlConnection conexao;
-        public Form1()
+        public frmPrincipal()
         {
             InitializeComponent();
         }
