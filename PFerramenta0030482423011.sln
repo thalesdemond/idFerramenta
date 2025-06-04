@@ -1,9 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.13.35818.85 d17.13
+VisualStudioVersion = 17.13.35818.85
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "tbTest", "tbTest.csproj", "{C8953938-69D7-4DCB-91EC-544BDE3DBC4C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PFerramenta0030482423011", "PFerramenta0030482423011.csproj", "{C8953938-69D7-4DCB-91EC-544BDE3DBC4C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
